@@ -10,6 +10,7 @@ module ActiveMerchant #:nodoc:
           CREATE_PARTNER_TRADE_BY_BUYER = 'create_partner_trade_by_buyer'
           TRADE_CREATE_BY_BUYER = 'trade_create_by_buyer'
           CREATE_FOREIGN_TRADE = 'create_forex_trade'
+          SEND_GOODS = 'send_goods_confirm_by_platform'
 
           ###################################################
           # common
@@ -30,6 +31,14 @@ module ActiveMerchant #:nodoc:
           mapping :payment_type, 'payment_type'
           mapping :extra_common_param, 'extra_common_param'
           mapping :currency, 'currency'
+
+          #################################################
+          # send goods
+          #################################################
+          mapping :trade_no, 'trade_no'
+          mapping :logistics_name, 'logistics_name'
+          mapping :invoice_no, 'invoice_no'
+          mapping :transport_type, 'transport_type'
 
           #################################################
           # create direct pay by user
